@@ -10,12 +10,34 @@ def main():
             print("Incorrect Format")
             continue
 
-    #get X Y and Z values from the list
-    try:
-        x= int(parts[0])
-        y = parts[1]
-        z= 
-        
+#get X Y and Z values from the list
+        try:
+            x = int(parts[0])
+            operator = parts[1]
+            z = int(parts[2])
+            
+        except ValueError:
+            print("X and Z need to be integers")
+            continue
+
+        if operator == "+":
+            result = float(x + z)
+        elif operator == "-":
+            result = float(x - z)
+        elif operator == "*":
+            result = float(x * z)
+        elif operator == "/":
+            result = float(x / z)
+        else:
+            print("ERROR: operators should be +, -, /, *")
+            continue
+        print(result)
+
+
+  
+  
+
+
     #and check if they are integers by converting to int()
     #except:
     #   output Error message and rempromt
