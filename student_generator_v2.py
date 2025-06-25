@@ -75,8 +75,8 @@ def student_to_dictionary(list_of_students: list[Student]) -> list[dict]:
         student_dictionary['last_name'] = student.get_last_name()
         student_dictionary['major'] = student.get_major()
         student_dictionary['gpa'] = student.get_gpa()
-        student_dictionary['class'] = student.get_class_level
-        student_dictionary['id'] = student.get_id_number
+        student_dictionary['class'] = student.get_class_level()
+        student_dictionary['id'] = student.get_id_number()
 
         #append the dictionary to the list of dictionaries 
         student_dictionary_list.append(student_dictionary)
@@ -95,9 +95,6 @@ def get_student_dictionaries():
     #get a list of student dictionaries
     student_dictionaries = student_to_dictionary(students_list)
 
-    for student_dict in student_dictionaries:
-        print (student_dict)
         
     return student_dictionaries
 
-get_student_dictionaries()
